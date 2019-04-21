@@ -1,3 +1,4 @@
+
 chrome.storage.onChanged.addListener(function(changes){
     try{
         var num = changes.list.newValue.length;

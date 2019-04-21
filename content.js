@@ -1,6 +1,10 @@
 (function(){
 
 
+
+
+
+
     $('#send').on('click', function (){
 
         var text = $('#type_name').val();
@@ -43,5 +47,5 @@
           chrome.notifications.create("delete",opt);
 
     });
-
+    
 })()

@@ -8,16 +8,20 @@
     },
 
     "background" : {
-        "scripts": ["eventPage.js"],
+        "scripts": ["scripts/eventPage.js", "scripts/options.js"],
         "persistent" : false
     },
-    
+
     "options_page": "options.html",
 
 
 
     "permissions": [
         "storage",
-        "notifications"
-    ]
+        "notifications",
+        "contextMenus"
+    ],
+    "icons": {
+        "16": "icon.png"
+      }
 }
