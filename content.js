@@ -10,12 +10,21 @@
             let data = [...items.list || [] ,...[{ "title": text }]];
             
             chrome.storage.sync.set({ list:data});
-
+            $('#type_name').val('');
         });
     
     });
     chrome.storage.sync.get('list', function (items){
-        console.table(items);
+        items.list.forEach(element => {
+            $('ul').append(`
+            <li>${element.title}</li>
+            `);
+        });
+        
+    });
+
+    $('#delete').on('click', function (){
+        chrome.storage.sync.remove('list');
     });
 
 })()
